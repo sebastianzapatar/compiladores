@@ -62,7 +62,7 @@ class ParserTest(TestCase):
 
         expected_names: List[str] = ['x', 'y', 'foo']
 
-        self.assertEquals(names, expected_names)
+        self.assertEqual(names, expected_names)
     
     def test_parse_errors(self) -> None:
         source: str = 'variable x 5;'
@@ -71,4 +71,4 @@ class ParserTest(TestCase):
 
         program: Program = parser.parse_program()
 
-        self.assertEquals(len(parser.errors), 1)
+        self.assertEqual(len(parser.errors), 1)
